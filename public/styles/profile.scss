@@ -1,0 +1,316 @@
+:root {
+    --header-background: #24292e;
+}
+
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.bodymain {
+    #mobilenav {
+        @media only screen and (min-width: 771px) {
+            display: none;
+        }
+
+        padding: 16px;
+
+        background: var(--header-background);
+
+        #mobilelistdropdown {
+            display: none;
+        }
+
+        .mainnavheader {
+            display: flex;
+            justify-content: space-between;
+
+            .iconButton {
+                background: transparent;
+                border: none;
+
+                .headericon {
+                    font-size: 24px;
+                    color: white;
+
+
+                }
+
+                .gitlogo {
+                    width: 30px;
+                }
+
+                .burg {
+                    width: 30px;
+                }
+
+                .notific {
+                    width: 24px;
+                }
+
+            }
+
+            .iconButton:focus {
+                outline: none;
+            }
+
+            .noti {
+                background-color: #006eed;
+                height: 9px;
+                margin: 0px;
+                border-radius: 100%;
+                width: 9px;
+                position: relative;
+                top: -30px;
+                left: 12px;
+            }
+        }
+
+        .headerinput {
+            margin: 10px 0px;
+
+            input {
+                min-height: 24px;
+                width: 95%;
+                border: 1px solid #444d56;
+                background: transparent;
+                border-radius: 5px;
+                padding: 5px 0px 5px 5%;
+                color: white;
+
+            }
+
+            ::placeholder {
+                color: #fff;
+                opacity: 0.8;
+
+            }
+
+            :-ms-input-placeholder {
+                color: #fff;
+                opacity: 0.8;
+            }
+
+            ::-ms-input-placeholder {
+                color: #fff;
+                opacity: 0.8;
+            }
+
+            input:focus {
+                outline: none;
+            }
+        }
+
+        .droplist {
+
+            .listitem {
+                border-top: 1px solid #ffffff26;
+                padding: 8px 0px;
+                font-weight: 600;
+
+                a {
+                    margin: 0px;
+                    color: #fff;
+
+                    text-decoration: none;
+
+                }
+
+                .avatar {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        border-radius: 100%
+                    }
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+
+                .signout {}
+            }
+
+        }
+
+    }
+
+    #mainnav {
+        padding: 16px;
+
+        background: var(--header-background);
+
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 771px) {
+            display: none;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+
+            .gitlogo {
+                width: 35px;
+            }
+
+            .search {
+                margin-left: 15px;
+            }
+
+            .search {
+                min-height: 24px;
+                width: 97%;
+                border: 1px solid #444d56;
+                background: transparent;
+                border-radius: 5px;
+                padding: 5px 0px 5px 3%;
+                color: white;
+                width: 282px;
+
+                @media only screen and (max-width: 950px) {
+                    width: 220px;
+                }
+
+            }
+
+            ::placeholder {
+                color: #fff;
+                opacity: 0.8;
+
+            }
+
+            :-ms-input-placeholder {
+                color: #fff;
+                opacity: 0.8;
+            }
+
+            ::-ms-input-placeholder {
+                color: #fff;
+                opacity: 0.8;
+            }
+
+            .search:focus {
+                outline: none;
+            }
+
+            .navlink {
+                color: white;
+                text-decoration: none;
+                margin-left: 10px;
+                white-space: nowrap;
+            }
+
+            .navlink:hover {
+                color: #ffffffb3;
+            }
+        }
+
+        .header-right {
+            display: flex;
+
+            .icondivv {
+                margin-left: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                .headericon {
+                    font-size: 24px;
+                    color: white;
+
+
+                }
+
+                .userimage {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                }
+
+                .downarrow {
+                    width: 11px;
+                    height: 11px;
+                    margin-left: 3px;
+                }
+
+                .plusarrow {
+                    width: 17px;
+                    height: 17px;
+                }
+
+                .gitlogo {
+                    width: 30px;
+                }
+
+                .burg {
+                    width: 30px;
+                }
+
+                .notific {
+                    width: 24px;
+                }
+
+            }
+
+            .iconButton {
+                background: transparent;
+                border: none;
+
+                .headericon {
+                    font-size: 24px;
+                    color: white;
+
+                }
+
+                .userimage {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                }
+
+                .downarrow {
+                    width: 15px;
+                    height: 15px;
+                }
+
+                .plusarrow {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .gitlogo {
+                    width: 30px;
+                }
+
+                .burg {
+                    width: 30px;
+                }
+
+                .notific {
+                    width: 24px;
+                }
+
+            }
+
+            .iconButton:focus {
+                outline: none;
+            }
+
+            .noti {
+                background-color: #006eed;
+                height: 9px;
+                margin: 0px;
+                border-radius: 100%;
+                width: 9px;
+                position: relative;
+                top: -9px;
+                left: -12px;
+            }
+        }
+    }
+
+}

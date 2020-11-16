@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+    <link rel="stylesheet" href="styles/dist/profile.css">
+</head>
+
+<body>
+    <main class="bodymain">
+        <nav id="mobilenav">
+            <section class="mainnavheader">
+                <button onclick="toggleburgmenu()" class="iconButton">
+                    <img class="burg" src="assets/imgs/svg/burgermenu.svg" alt="Click to toggle">
+                </button>
+
+                <button class="iconButton">
+                    <img class="gitlogo" src="assets/imgs/svg/githublogo.svg" alt="Click to go Home">
+                </button>
+
+                <button class="iconButton">
+                    <img class="notific" src="assets/imgs/svg/notification.svg" alt="">
+                    <p class="noti"></p>
+
+                </button>
+            </section>
+            <div id="mobilelistdropdown">
+                <div class="headerinput">
+                    <input type="text" placeholder="Search">
+                </div>
+                <section class="droplist">
+                    <div class="listitem">
+                        <a href="/">Dashboard</a>
+                    </div>
+                    <div class="listitem">
+                        <a href="/">Pull requests</a>
+                    </div>
+                    <div class="listitem">
+                        <a href="/">Issues</a>
+                    </div>
+                    <div class="listitem">
+                        <a href="/">Marketplace</a>
+                    </div>
+                    <div class="listitem">
+                        <a href="/">Explore</a>
+                    </div>
+                    <div class="listitem">
+                        <a class="avatar" href="/"> <img class="avatar"
+                                src="https://avatars1.githubusercontent.com/u/26200212?s=40&amp;v=4" width="20"
+                                height="20" alt="@onaty">
+                            <span>onaty</span></a>
+                    </div>
+                    <div class="listitem">
+                        <a href="/"><i class="fas fa-sign-out-alt signout"></i> Sign Out</a>
+                    </div>
+                </section>
+            </div>
+
+        </nav>
+        <nav id="mainnav">
+            <div class="header-left">
+                <img class="gitlogo" src="assets/imgs/svg/githublogo.svg" alt="Click to go Home">
+                <input class="search" placeholder="Search" type="text">
+                <a class="navlink" href="/"> Pull requests</a>
+                <a  class="navlink" href="/"> Issues</a>
+                <a  class="navlink" href="/">MarketPlace</a>
+                <a  class="navlink" href="/"> Explore</a>
+            </div>
+
+            <div class="header-right">
+                <div class="icondivv">
+                    <img class="notific" src="assets/imgs/svg/notification.svg" alt="">
+                    <p class="noti"></p>
+                </div>
+
+                <div  class="icondivv">
+                    <img class="plusarrow" src="assets/imgs/svg/pluss.png" alt="">
+                    <img  class="downarrow" src="assets/imgs/svg/downarrow.png" alt="">
+                </div>
+
+                <div  class="icondivv">
+                    <img class="userimage" src="https://avatars2.githubusercontent.com/u/26200212?s=460&v=4" alt="">
+                    <img class="downarrow" src="assets/imgs/svg/downarrow.png" alt="">
+                </div>
+
+            </div>
+        </nav>
+    </main>
+</body>
+<script src="assets/js/index.js"></script>
+
+</html>

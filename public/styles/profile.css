@@ -1,0 +1,245 @@
+:root {
+  --header-background: #24292e;
+  --header-e: #6991b9;
+}
+
+body {
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.bodymain .vv {
+  color: black;
+}
+.bodymain #mobilenav {
+  padding: 16px;
+  background: var(--header-background);
+}
+@media only screen and (min-width: 771px) {
+  .bodymain #mobilenav {
+    display: none;
+  }
+}
+.bodymain #mobilenav #mobilelistdropdown {
+  display: none;
+}
+.bodymain #mobilenav .mainnavheader {
+  display: flex;
+  justify-content: space-between;
+}
+.bodymain #mobilenav .mainnavheader .iconButton {
+  background: transparent;
+  border: none;
+}
+.bodymain #mobilenav .mainnavheader .iconButton .headericon {
+  font-size: 24px;
+  color: white;
+}
+.bodymain #mobilenav .mainnavheader .iconButton .gitlogo {
+  width: 30px;
+}
+.bodymain #mobilenav .mainnavheader .iconButton .burg {
+  width: 30px;
+}
+.bodymain #mobilenav .mainnavheader .iconButton .notific {
+  width: 24px;
+}
+.bodymain #mobilenav .mainnavheader .iconButton:focus {
+  outline: none;
+}
+.bodymain #mobilenav .mainnavheader .noti {
+  background-color: #006eed;
+  height: 9px;
+  margin: 0px;
+  border-radius: 100%;
+  width: 9px;
+  position: relative;
+  top: -30px;
+  left: 12px;
+}
+.bodymain #mobilenav .headerinput {
+  margin: 10px 0px;
+}
+.bodymain #mobilenav .headerinput input {
+  min-height: 24px;
+  width: 95%;
+  border: 1px solid #444d56;
+  background: transparent;
+  border-radius: 5px;
+  padding: 5px 0px 5px 5%;
+  color: white;
+}
+.bodymain #mobilenav .headerinput ::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain #mobilenav .headerinput :-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain #mobilenav .headerinput ::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain #mobilenav .headerinput input:focus {
+  outline: none;
+}
+.bodymain #mobilenav .droplist .listitem {
+  border-top: 1px solid #ffffff26;
+  padding: 8px 0px;
+  font-weight: 600;
+}
+.bodymain #mobilenav .droplist .listitem a {
+  margin: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+.bodymain #mobilenav .droplist .listitem .avatar {
+  display: flex;
+  align-items: center;
+}
+.bodymain #mobilenav .droplist .listitem .avatar img {
+  border-radius: 100%;
+}
+.bodymain #mobilenav .droplist .listitem .avatar span {
+  margin-left: 5px;
+}
+.bodymain #mainnav {
+  padding: 16px;
+  background: var(--header-background);
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 771px) {
+  .bodymain #mainnav {
+    display: none;
+  }
+}
+.bodymain #mainnav .header-left {
+  display: flex;
+  align-items: center;
+}
+.bodymain #mainnav .header-left .gitlogo {
+  width: 35px;
+}
+.bodymain #mainnav .header-left .search {
+  margin-left: 15px;
+}
+.bodymain #mainnav .header-left .search {
+  min-height: 24px;
+  width: 97%;
+  border: 1px solid #444d56;
+  background: transparent;
+  border-radius: 5px;
+  padding: 5px 0px 5px 3%;
+  color: white;
+  width: 282px;
+}
+@media only screen and (max-width: 950px) {
+  .bodymain #mainnav .header-left .search {
+    width: 220px;
+  }
+}
+.bodymain #mainnav .header-left ::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain #mainnav .header-left :-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain #mainnav .header-left ::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain #mainnav .header-left .search:focus {
+  outline: none;
+}
+.bodymain #mainnav .header-left .navlink {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.bodymain #mainnav .header-left .navlink:hover {
+  color: #ffffffb3;
+}
+.bodymain #mainnav .header-right {
+  display: flex;
+}
+.bodymain #mainnav .header-right .icondivv {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodymain #mainnav .header-right .icondivv .headericon {
+  font-size: 24px;
+  color: white;
+}
+.bodymain #mainnav .header-right .icondivv .userimage {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+.bodymain #mainnav .header-right .icondivv .downarrow {
+  width: 11px;
+  height: 11px;
+  margin-left: 3px;
+}
+.bodymain #mainnav .header-right .icondivv .plusarrow {
+  width: 17px;
+  height: 17px;
+}
+.bodymain #mainnav .header-right .icondivv .gitlogo {
+  width: 30px;
+}
+.bodymain #mainnav .header-right .icondivv .burg {
+  width: 30px;
+}
+.bodymain #mainnav .header-right .icondivv .notific {
+  width: 24px;
+}
+.bodymain #mainnav .header-right .iconButton {
+  background: transparent;
+  border: none;
+}
+.bodymain #mainnav .header-right .iconButton .headericon {
+  font-size: 24px;
+  color: white;
+}
+.bodymain #mainnav .header-right .iconButton .userimage {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.bodymain #mainnav .header-right .iconButton .downarrow {
+  width: 15px;
+  height: 15px;
+}
+.bodymain #mainnav .header-right .iconButton .plusarrow {
+  width: 25px;
+  height: 25px;
+}
+.bodymain #mainnav .header-right .iconButton .gitlogo {
+  width: 30px;
+}
+.bodymain #mainnav .header-right .iconButton .burg {
+  width: 30px;
+}
+.bodymain #mainnav .header-right .iconButton .notific {
+  width: 24px;
+}
+.bodymain #mainnav .header-right .iconButton:focus {
+  outline: none;
+}
+.bodymain #mainnav .header-right .noti {
+  background-color: #006eed;
+  height: 9px;
+  margin: 0px;
+  border-radius: 100%;
+  width: 9px;
+  position: relative;
+  top: -9px;
+  left: -12px;
+}

@@ -1,5 +1,6 @@
 :root {
     --header-background: #24292e;
+    --header-e: #6991b9;
 }
 
 body {
@@ -8,6 +9,9 @@ body {
 }
 
 .bodymain {
+    .vv{
+        color: black;
+    }
     #mobilenav {
         @media only screen and (min-width: 771px) {
             display: none;

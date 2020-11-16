@@ -378,9 +378,11 @@ body {
             .fillup {
                 width: 25%;
                 margin-right: 3%;
+
                 @media only screen and (max-width: 771px) {
                     display: none;
                 }
+
                 p {
                     margin: 0px;
                 }
@@ -388,12 +390,14 @@ body {
 
             .tabsicon {
                 display: flex;
-
+                cursor: pointer;
                 width: 75%;
+
                 @media only screen and (max-width: 771px) {
                     width: 100%;
-                    overflow:scroll
+                    overflow: scroll
                 }
+
                 .selected {
                     font-weight: 600;
                     color: #24292e;
@@ -452,6 +456,7 @@ body {
                 width: 25%;
                 margin-top: -32px;
                 margin-right: 3%;
+
                 .userdetails {
                     display: flex;
                     align-items: center;

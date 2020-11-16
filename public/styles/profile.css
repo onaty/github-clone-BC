@@ -303,6 +303,7 @@ body {
 }
 .bodymain .datasect .tabsdiv .tabsicon {
   display: flex;
+  cursor: pointer;
   width: 75%;
 }
 @media only screen and (max-width: 771px) {

@@ -352,6 +352,7 @@ body {
   max-width: 1280px;
 }
 .bodymain .datasect .reposect .profiledata {
+  padding: 0px 32px;
   width: 25%;
   margin-top: -32px;
   margin-right: 3%;

@@ -288,6 +288,11 @@ body {
   margin-top: 24px;
   border-bottom: 2px solid #eaecef;
   box-sizing: border-box;
+  z-index: 3;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 .bodymain .datasect .tabsdiv .firstinner {
   margin-left: auto;
@@ -298,13 +303,33 @@ body {
 .bodymain .datasect .tabsdiv .fillup {
   width: 25%;
   margin-right: 3%;
+  padding: 8px 16px;
+  align-items: center;
+  display: flex;
 }
 @media only screen and (max-width: 771px) {
   .bodymain .datasect .tabsdiv .fillup {
     display: none;
   }
 }
-.bodymain .datasect .tabsdiv .fillup p {
+.bodymain .datasect .tabsdiv .fillup .shortenimg {
+  display: flex;
+}
+.bodymain .datasect .tabsdiv .fillup .shortenimg .avatar {
+  display: flex;
+  align-items: center;
+}
+.bodymain .datasect .tabsdiv .fillup .shortenimg .avatar img {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+}
+.bodymain .datasect .tabsdiv .fillup .shortenimg .name {
+  display: flex;
+  align-items: center;
+  margin-left: 7px;
+}
+.bodymain .datasect .tabsdiv .fillup .shortenimg .name p {
   margin: 0px;
 }
 .bodymain .datasect .tabsdiv .tabsicon {
@@ -320,9 +345,28 @@ body {
 }
 .bodymain .datasect .tabsdiv .tabsicon .selected {
   font-weight: 600;
-  color: #24292e;
   border-bottom: 4px solid #f9826c;
   outline: 1px dotted transparent;
+}
+.bodymain .datasect .tabsdiv .tabsicon .selected .tabtitle {
+  white-space: nowrap;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 30px;
+  margin-left: 7px;
+  color: #24292e;
+  opacity: unset;
+}
+.bodymain .datasect .tabsdiv .tabsicon .selected .tabtitle span {
+  margin-left: 4px;
+  color: #24292e;
+  background-color: rgba(209, 213, 218, 0.5);
+  min-width: 20px;
+  padding: 4px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  border-radius: 2em;
 }
 .bodymain .datasect .tabsdiv .tabsicon .tab {
   display: flex;
@@ -339,6 +383,7 @@ body {
   line-height: 30px;
   margin-left: 7px;
   color: #24292e;
+  opacity: 0.8;
 }
 .bodymain .datasect .tabsdiv .tabsicon .tab .tabtitle span {
   margin-left: 4px;
@@ -377,6 +422,7 @@ body {
 .bodymain .datasect .reposect .profiledata .userdetails .userdp {
   width: 100%;
   margin-bottom: 20px;
+  z-index: 7;
 }
 .bodymain .datasect .reposect .profiledata .userdetails .userdp .avatar {
   width: 100%;

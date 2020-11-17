@@ -375,6 +375,12 @@ body {
 
             border-bottom: 2px solid #eaecef;
             box-sizing: border-box;
+            z-index: 3;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+
+            background: white;
 
             .firstinner {
                 margin-left: auto;
@@ -390,9 +396,30 @@ body {
                 @media only screen and (max-width: 771px) {
                     display: none;
                 }
+                padding: 8px 16px;
+                align-items: center;
+                display: flex;
+                .shortenimg {
+                    display: flex;
+                    .avatar {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 34px;
+                            height: 34px;
+                            border-radius: 100%;
+                        }
+                    }
 
-                p {
-                    margin: 0px;
+                    .name {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 7px;
+                        p {
+                            margin: 0px;
+                        }
+                    }
+
                 }
             }
 
@@ -408,9 +435,33 @@ body {
 
                 .selected {
                     font-weight: 600;
-                    color: #24292e;
+
                     border-bottom: 4px solid #f9826c;
                     outline: 1px dotted transparent;
+
+                    .tabtitle {
+
+                        white-space: nowrap;
+
+                        margin: 0px;
+                        font-size: 16px;
+                        line-height: 30px;
+                        margin-left: 7px;
+                        color: #24292e;
+                        opacity: unset;
+
+                        span {
+                            margin-left: 4px;
+                            color: #24292e;
+                            background-color: rgba(209, 213, 218, 0.5);
+                            min-width: 20px;
+                            padding: 4px 11px;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 18px;
+                            border-radius: 2em;
+                        }
+                    }
                 }
 
                 .tab {
@@ -432,6 +483,8 @@ body {
                         margin-left: 7px;
                         color: #24292e;
 
+                        opacity: 0.8;
+
                         span {
                             margin-left: 4px;
                             color: #24292e;
@@ -444,6 +497,7 @@ body {
                             border-radius: 2em;
                         }
                     }
+
                 }
             }
         }
@@ -465,6 +519,7 @@ body {
                 margin-top: -32px;
                 // margin-right: 3%;
 
+
                 .userdetails {
                     display: flex;
                     align-items: center;
@@ -474,7 +529,7 @@ body {
                     .userdp {
                         width: 100%;
                         margin-bottom: 20px;
-
+                        z-index: 7;
                         .avatar {
                             width: 100%;
                             border-radius: 100%;
@@ -582,16 +637,19 @@ body {
 
                         // border-top: 1px solid #e1e4e8;
                         border-bottom: 1px solid #e1e4e8;
-                      padding-bottom: 12px;
+                        padding-bottom: 12px;
                         display: flex;
                         padding-top: 24px;
                         padding-bottom: 24px;
+
                         .details {
                             width: 72%;
+
                             .name {
                                 h3 {
                                     margin: 0px;
                                     margin-bottom: 10px;
+
                                     a {
                                         color: #0366d6;
                                         text-decoration: none;
@@ -607,18 +665,20 @@ body {
                             .description {
                                 padding-right: 24px;
                                 margin-bottom: 16px;
-                                p{
+
+                                p {
                                     width: 80%;
                                     color: #586069;
                                     font-size: 14px;
                                     margin: 0px;
+
                                     @media only screen and (max-width: 771px) {
                                         width: 100%;
                                         font-size: 13px;
                                     }
                                 }
 
-             
+
                             }
 
                             .repodatas {
@@ -627,6 +687,7 @@ body {
                                 .reponame {
                                     margin-right: 8px;
                                     color: #586069;
+
                                     .colorss {
                                         position: relative;
                                         top: 1px;

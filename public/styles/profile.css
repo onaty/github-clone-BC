@@ -46,24 +46,28 @@ body {
 }
 .bodymain #mobilenav .mainnavheader .noti {
   background-color: #006eed;
-  height: 9px;
+  height: 11px;
   margin: 0px;
   border-radius: 100%;
-  width: 9px;
+  width: 11px;
   position: relative;
-  top: -30px;
-  left: 12px;
+  top: -28px;
+  left: 11px;
 }
 .bodymain #mobilenav .headerinput {
   margin: 10px 0px;
+  width: 95%;
+  padding: 2px 2% 5px 2%;
+  border: 1px solid #444d56;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 .bodymain #mobilenav .headerinput input {
   min-height: 24px;
-  width: 95%;
-  border: 1px solid #444d56;
   background: transparent;
-  border-radius: 5px;
-  padding: 5px 0px 5px 5%;
+  border: none;
+  width: 100%;
   color: white;
 }
 .bodymain #mobilenav .headerinput ::placeholder {
@@ -119,43 +123,45 @@ body {
 .bodymain #mainnav .header-left .gitlogo {
   width: 35px;
 }
-.bodymain #mainnav .header-left .search {
-  margin-left: 15px;
-}
-.bodymain #mainnav .header-left .search {
-  min-height: 24px;
-  width: 97%;
+.bodymain #mainnav .header-left .searchfield {
+  display: flex;
   border: 1px solid #444d56;
-  background: transparent;
+  padding: 1px 1% 1px 1%;
+  margin-left: 15px;
   border-radius: 5px;
-  padding: 5px 0px 5px 3%;
-  color: white;
   width: 282px;
 }
 @media only screen and (max-width: 950px) {
-  .bodymain #mainnav .header-left .search {
+  .bodymain #mainnav .header-left .searchfield {
     width: 220px;
   }
 }
-.bodymain #mainnav .header-left ::placeholder {
+.bodymain #mainnav .header-left .searchfield .search {
+  min-height: 24px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+}
+.bodymain #mainnav .header-left .searchfield ::placeholder {
   color: #fff;
   opacity: 0.8;
 }
-.bodymain #mainnav .header-left :-ms-input-placeholder {
+.bodymain #mainnav .header-left .searchfield :-ms-input-placeholder {
   color: #fff;
   opacity: 0.8;
 }
-.bodymain #mainnav .header-left ::-ms-input-placeholder {
+.bodymain #mainnav .header-left .searchfield ::-ms-input-placeholder {
   color: #fff;
   opacity: 0.8;
 }
-.bodymain #mainnav .header-left .search:focus {
+.bodymain #mainnav .header-left .searchfield .search:focus {
   outline: none;
 }
 .bodymain #mainnav .header-left .navlink {
   color: white;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 16px;
   white-space: nowrap;
   font-weight: 600;
 }
@@ -166,10 +172,11 @@ body {
   display: flex;
 }
 .bodymain #mainnav .header-right .icondivv {
-  margin-left: 15px;
+  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .bodymain #mainnav .header-right .icondivv .headericon {
   font-size: 24px;
@@ -181,22 +188,24 @@ body {
   border-radius: 100%;
 }
 .bodymain #mainnav .header-right .icondivv .downarrow {
-  width: 11px;
-  height: 11px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  content: "";
+  border-top-style: solid;
+  border-top-width: 4px;
+  border-right: 4px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
   margin-left: 3px;
-}
-.bodymain #mainnav .header-right .icondivv .plusarrow {
-  width: 17px;
-  height: 17px;
+  color: white;
 }
 .bodymain #mainnav .header-right .icondivv .gitlogo {
   width: 30px;
 }
 .bodymain #mainnav .header-right .icondivv .burg {
   width: 30px;
-}
-.bodymain #mainnav .header-right .icondivv .notific {
-  width: 24px;
 }
 .bodymain #mainnav .header-right .iconButton {
   background: transparent;
@@ -233,13 +242,13 @@ body {
 }
 .bodymain #mainnav .header-right .noti {
   background-color: #006eed;
-  height: 9px;
+  height: 10px;
   margin: 0px;
   border-radius: 100%;
-  width: 9px;
+  width: 10px;
   position: relative;
-  top: -9px;
-  left: -12px;
+  top: -8px;
+  left: -10px;
 }
 .bodymain .datasect #mobilename {
   padding: 0px 16px;
@@ -345,7 +354,7 @@ body {
 }
 .bodymain .datasect .tabsdiv .tabsicon .selected {
   font-weight: 600;
-  border-bottom: 4px solid #f9826c;
+  border-bottom: 2px solid #f9826c !important;
   outline: 1px dotted transparent;
 }
 .bodymain .datasect .tabsdiv .tabsicon .selected .tabtitle {
@@ -355,7 +364,7 @@ body {
   line-height: 30px;
   margin-left: 7px;
   color: #24292e;
-  opacity: unset;
+  opacity: unset !important;
 }
 .bodymain .datasect .tabsdiv .tabsicon .selected .tabtitle span {
   margin-left: 4px;
@@ -373,28 +382,20 @@ body {
   padding: 8px 16px;
   align-items: center;
 }
-.bodymain .datasect .tabsdiv .tabsicon .tab .tabicon {
-  width: 19px;
-}
 .bodymain .datasect .tabsdiv .tabsicon .tab .tabtitle {
   white-space: nowrap;
   margin: 0px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   margin-left: 7px;
   color: #24292e;
-  opacity: 0.8;
+  line-height: 30px;
+  transition: border-bottom-color 0.36s ease-in;
 }
-.bodymain .datasect .tabsdiv .tabsicon .tab .tabtitle span {
-  margin-left: 4px;
-  color: #24292e;
-  background-color: rgba(209, 213, 218, 0.5);
-  min-width: 20px;
-  padding: 4px 11px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 18px;
-  border-radius: 2em;
+.bodymain .datasect .tabsdiv .tabsicon .tab:hover {
+  border-bottom: 2px solid #d1d5da;
+  transition-timing-function: ease-out;
+  transition-duration: 0.12s;
 }
 .bodymain .datasect .reposect {
   display: flex;
@@ -542,10 +543,13 @@ body {
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details .repodatas {
   font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details .repodatas .reponame {
   margin-right: 8px;
   color: #586069;
+  margin-top: 8px;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details .repodatas .reponame .colorss {
   position: relative;
@@ -559,15 +563,18 @@ body {
   background-color: #4F5D95;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details .repodatas .detss {
+  margin-top: 8px;
   margin-right: 8px;
   color: #586069;
+  display: flex;
+  align-items: center;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details .repodatas .detss img {
   width: 12px;
   height: 12px;
-  margin-right: 5px;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details .repodatas .detss span {
+  margin-left: 5px;
   font-size: 14px;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .buttons {
@@ -579,19 +586,18 @@ body {
 .bodymain .datasect .reposect .repositry .repolist .repo .buttons .starbutton {
   color: #24292e;
   background-color: #fafbfc;
-  border-color: rgba(27, 31, 35, 0.15);
+  border: 1px solid rgba(27, 31, 35, 0.15);
   padding: 3px 12px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
+  font-weight: 500px;
   white-space: nowrap;
   cursor: pointer;
   display: flex;
   border-radius: 6px;
-}
-.bodymain .datasect .reposect .repositry .repolist .repo .buttons .starbutton img {
-  width: 15px;
-  margin-right: 5px;
+  align-items: center;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .buttons .starbutton span {
   font-weight: 500;
+  margin-left: 5px;
 }

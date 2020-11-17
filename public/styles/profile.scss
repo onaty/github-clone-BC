@@ -58,26 +58,32 @@ body {
 
             .noti {
                 background-color: #006eed;
-                height: 9px;
+                height: 11px;
                 margin: 0px;
                 border-radius: 100%;
-                width: 9px;
+                width: 11px;
                 position: relative;
-                top: -30px;
-                left: 12px;
+                top: -28px;
+                left: 11px;
             }
         }
 
         .headerinput {
             margin: 10px 0px;
+            width: 95%;
+            padding:2px 2% 5px 2%;
+            border: 1px solid #444d56;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
 
             input {
                 min-height: 24px;
-                width: 95%;
-                border: 1px solid #444d56;
+
                 background: transparent;
-                border-radius: 5px;
-                padding: 5px 0px 5px 5%;
+
+                border: none;
+                width: 100%;
                 color: white;
 
             }
@@ -158,50 +164,60 @@ body {
                 width: 35px;
             }
 
-            .search {
-                margin-left: 15px;
-            }
-
-            .search {
-                min-height: 24px;
-                width: 97%;
+            .searchfield {
+                display: flex;
                 border: 1px solid #444d56;
-                background: transparent;
+                padding: 1px 1% 1px 1%;
+                margin-left: 15px;
                 border-radius: 5px;
-                padding: 5px 0px 5px 3%;
-                color: white;
+
                 width: 282px;
 
                 @media only screen and (max-width: 950px) {
                     width: 220px;
                 }
 
+                .search {
+                    min-height: 24px;
+                    width: 100%;
+
+                    background: transparent;
+
+                    border: none;
+                    color: white;
+
+
+
+
+                }
+
+                ::placeholder {
+                    color: #fff;
+                    opacity: 0.8;
+
+                }
+
+                :-ms-input-placeholder {
+                    color: #fff;
+                    opacity: 0.8;
+                }
+
+                ::-ms-input-placeholder {
+                    color: #fff;
+                    opacity: 0.8;
+                }
+
+                .search:focus {
+                    outline: none;
+                }
+
             }
 
-            ::placeholder {
-                color: #fff;
-                opacity: 0.8;
-
-            }
-
-            :-ms-input-placeholder {
-                color: #fff;
-                opacity: 0.8;
-            }
-
-            ::-ms-input-placeholder {
-                color: #fff;
-                opacity: 0.8;
-            }
-
-            .search:focus {
-                outline: none;
-            }
 
             .navlink {
                 color: white;
                 text-decoration: none;
-                margin-left: 10px;
+                margin-left: 16px;
                 white-space: nowrap;
                 font-weight: 600;
             }
@@ -215,11 +231,11 @@ body {
             display: flex;
 
             .icondivv {
-                margin-left: 15px;
+                margin-right: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+                cursor: pointer;
 
                 .headericon {
                     font-size: 24px;
@@ -235,14 +251,23 @@ body {
                 }
 
                 .downarrow {
-                    width: 11px;
-                    height: 11px;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    vertical-align: middle;
+                    content: "";
+                    border-top-style: solid;
+                    border-top-width: 4px;
+                    border-right: 4px solid transparent;
+                    border-bottom: 0 solid transparent;
+                    border-left: 4px solid transparent;
                     margin-left: 3px;
+                    color: white;
                 }
 
                 .plusarrow {
-                    width: 17px;
-                    height: 17px;
+                    // width: 17px;
+                    // height: 17px;
                 }
 
                 .gitlogo {
@@ -254,7 +279,7 @@ body {
                 }
 
                 .notific {
-                    width: 24px;
+                    // width: 24px;
                 }
 
             }
@@ -305,13 +330,13 @@ body {
 
             .noti {
                 background-color: #006eed;
-                height: 9px;
+                height: 10px;
                 margin: 0px;
                 border-radius: 100%;
-                width: 9px;
+                width: 10px;
                 position: relative;
-                top: -9px;
-                left: -12px;
+                top: -8px;
+                left: -10px;
             }
         }
     }
@@ -396,14 +421,18 @@ body {
                 @media only screen and (max-width: 771px) {
                     display: none;
                 }
+
                 padding: 8px 16px;
                 align-items: center;
                 display: flex;
+
                 .shortenimg {
                     display: flex;
+
                     .avatar {
                         display: flex;
                         align-items: center;
+
                         img {
                             width: 34px;
                             height: 34px;
@@ -415,6 +444,7 @@ body {
                         display: flex;
                         align-items: center;
                         margin-left: 7px;
+
                         p {
                             margin: 0px;
                         }
@@ -436,7 +466,7 @@ body {
                 .selected {
                     font-weight: 600;
 
-                    border-bottom: 4px solid #f9826c;
+                    border-bottom: 2px solid #f9826c !important;
                     outline: 1px dotted transparent;
 
                     .tabtitle {
@@ -448,7 +478,7 @@ body {
                         line-height: 30px;
                         margin-left: 7px;
                         color: #24292e;
-                        opacity: unset;
+                        opacity: unset !important;
 
                         span {
                             margin-left: 4px;
@@ -469,35 +499,30 @@ body {
                     padding: 8px 16px;
                     align-items: center;
 
-                    .tabicon {
-                        width: 19px;
-                    }
+                    .tabicon {}
+
 
                     .tabtitle {
 
                         white-space: nowrap;
 
                         margin: 0px;
-                        font-size: 16px;
+                        font-size: 14px;
                         line-height: 30px;
                         margin-left: 7px;
                         color: #24292e;
+                        line-height: 30px;
 
-                        opacity: 0.8;
-
-                        span {
-                            margin-left: 4px;
-                            color: #24292e;
-                            background-color: rgba(209, 213, 218, 0.5);
-                            min-width: 20px;
-                            padding: 4px 11px;
-                            font-size: 12px;
-                            font-weight: 600;
-                            line-height: 18px;
-                            border-radius: 2em;
-                        }
+                        transition: border-bottom-color .36s ease-in;
                     }
 
+                }
+
+                .tab:hover {
+                    border-bottom: 2px solid #d1d5da;
+
+                    transition-timing-function: ease-out;
+                    transition-duration: .12s;
                 }
             }
         }
@@ -530,6 +555,7 @@ body {
                         width: 100%;
                         margin-bottom: 20px;
                         z-index: 7;
+
                         .avatar {
                             width: 100%;
                             border-radius: 100%;
@@ -580,6 +606,7 @@ body {
                         width: 100%;
                         border-bottom: 1px solid #e1e4e8;
                         padding-bottom: 10px;
+
 
                         .search {
                             min-height: 24px;
@@ -683,10 +710,13 @@ body {
 
                             .repodatas {
                                 font-size: 14px;
+                                display: flex;
+                                flex-wrap: wrap;
 
                                 .reponame {
                                     margin-right: 8px;
                                     color: #586069;
+                                    margin-top: 8px;
 
                                     .colorss {
                                         position: relative;
@@ -708,16 +738,20 @@ body {
                                 }
 
                                 .detss {
+                                    margin-top: 8px;
                                     margin-right: 8px;
                                     color: #586069;
+                                    display: flex;
+                                    align-items: center;
 
                                     img {
                                         width: 12px;
                                         height: 12px;
-                                        margin-right: 5px;
+
                                     }
 
                                     span {
+                                        margin-left: 5px;
                                         font-size: 14px;
                                     }
                                 }
@@ -735,24 +769,21 @@ body {
                             .starbutton {
                                 color: #24292e;
                                 background-color: #fafbfc;
-                                border-color: rgb(27 31 35 / 15%);
+                                border: 1px solid rgb(27 31 35 / 15%);
                                 padding: 3px 12px;
-                                font-size: 12px;
+                                font-size: 14px;
                                 line-height: 20px;
-
+                                font-weight: 500px;
                                 white-space: nowrap;
                                 cursor: pointer;
                                 display: flex;
                                 border-radius: 6px;
+                                align-items: center;
 
-                                img {
-
-                                    width: 15px;
-                                    margin-right: 5px;
-                                }
 
                                 span {
                                     font-weight: 500;
+                                    margin-left: 5px;
                                 }
 
                             }

@@ -279,15 +279,21 @@ body {
   line-height: 24px;
   color: #586069;
   margin: 0px;
+  margin-left: 3px;
 }
 .bodymain .datasect #mobilename .status {
   color: #24292e;
 }
 .bodymain .datasect .tabsdiv {
   margin-top: 24px;
-  display: flex;
   border-bottom: 2px solid #eaecef;
   box-sizing: border-box;
+}
+.bodymain .datasect .tabsdiv .firstinner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  display: flex;
 }
 .bodymain .datasect .tabsdiv .fillup {
   width: 25%;
@@ -304,7 +310,7 @@ body {
 .bodymain .datasect .tabsdiv .tabsicon {
   display: flex;
   cursor: pointer;
-  width: 75%;
+  width: 72%;
 }
 @media only screen and (max-width: 771px) {
   .bodymain .datasect .tabsdiv .tabsicon {
@@ -356,7 +362,6 @@ body {
   padding: 0px 32px;
   width: 25%;
   margin-top: -32px;
-  margin-right: 3%;
 }
 @media only screen and (max-width: 771px) {
   .bodymain .datasect .reposect .profiledata {
@@ -399,4 +404,56 @@ body {
 }
 .bodymain .datasect .reposect .repositry {
   width: 72%;
+}
+@media only screen and (max-width: 771px) {
+  .bodymain .datasect .reposect .repositry {
+    width: 100%;
+    padding: 0px 16px;
+  }
+}
+.bodymain .datasect .reposect .repositry .inputdiv {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .findrepo {
+  width: 100%;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 10px;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .findrepo .search {
+  min-height: 24px;
+  width: 97%;
+  border: 1px solid #e1e4e8;
+  background: transparent;
+  padding: 5px 0px 5px 1.5%;
+  color: #24292e;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .findrepo ::placeholder {
+  color: #6a737d;
+  opacity: 0.9;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .findrepo :-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .findrepo ::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .findrepo .search:focus {
+  outline: none;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .resultsnumber p {
+  margin: 0px;
+  margin-top: 16px;
+  color: #24292e;
+  width: fit-content;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 16px;
+}
+.bodymain .datasect .reposect .repositry .inputdiv .resultsnumber p strong {
+  opacity: 0.9;
 }

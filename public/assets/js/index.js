@@ -1,3 +1,4 @@
+
 function toggleburgmenu(value) {
   var x = document.getElementById("mobilelistdropdown");
 
@@ -21,8 +22,10 @@ function isInViewport(element) {
 
 const profdiv = document.querySelector("#profilediv");
 (function () {
-  console.log('here');
+if (profdiv) {
   const messageText = isInViewport(profdiv) ? showthem() : hidethem();
+}
+ 
 })();
 document.addEventListener(
   "scroll",

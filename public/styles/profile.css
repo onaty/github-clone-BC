@@ -403,6 +403,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
+  margin-bottom: 60px;
 }
 .bodymain .datasect .reposect .profiledata {
   padding: 0px 32px;
@@ -413,6 +414,13 @@ body {
   .bodymain .datasect .reposect .profiledata {
     display: none;
   }
+}
+.bodymain .datasect .reposect .profiledata .imgloader {
+  z-index: 7;
+  /* width: 300px; */
+  height: 300px;
+  width: 100%;
+  border-radius: 100%;
 }
 .bodymain .datasect .reposect .profiledata .userdetails {
   display: flex;
@@ -464,10 +472,10 @@ body {
 }
 .bodymain .datasect .reposect .repositry .inputdiv .findrepo {
   width: 100%;
-  border-bottom: 1px solid #e1e4e8;
   padding-bottom: 10px;
 }
 .bodymain .datasect .reposect .repositry .inputdiv .findrepo .search {
+  display: none;
   min-height: 24px;
   width: 97%;
   border: 1px solid #e1e4e8;
@@ -504,12 +512,20 @@ body {
 .bodymain .datasect .reposect .repositry .inputdiv .resultsnumber p strong {
   opacity: 0.9;
 }
+.bodymain .datasect .reposect .repositry .repolist .repoloader {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+.bodymain .datasect .reposect .repositry .repolist .mt {
+  margin-top: 20px;
+}
 .bodymain .datasect .reposect .repositry .repolist .repo {
-  border-bottom: 1px solid #e1e4e8;
+  border-top: 1px solid #e1e4e8;
   padding-bottom: 12px;
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 .bodymain .datasect .reposect .repositry .repolist .repo .details {
   width: 72%;
@@ -600,4 +616,30 @@ body {
 .bodymain .datasect .reposect .repositry .repolist .repo .buttons .starbutton span {
   font-weight: 500;
   margin-left: 5px;
+}
+
+.loading {
+  position: relative;
+  background-color: #e2e2e2;
+}
+
+/* The moving element */
+.loading::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.2)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  /* Adding animation */
+  animation: loading 0.8s infinite;
+}
+
+/* Loading Animation */
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
 }

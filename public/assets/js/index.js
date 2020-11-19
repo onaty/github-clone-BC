@@ -1,4 +1,3 @@
-
 function toggleburgmenu(value) {
   var x = document.getElementById("mobilelistdropdown");
 
@@ -21,16 +20,17 @@ function isInViewport(element) {
 }
 
 const profdiv = document.querySelector("#profilediv");
+
 (function () {
-if (profdiv) {
-  const messageText = isInViewport(profdiv) ? showthem() : hidethem();
-}
- 
+  if (profdiv) {
+    const messageText = isInViewport(profdiv) ? showthem() : hidethem();
+  }
 })();
 document.addEventListener(
   "scroll",
   function () {
-    const messageText = isInViewport(profdiv) ? showthem() : hidethem();
+    const profdivs = document.querySelector("#profilediv");
+    const messageText = isInViewport(profdivs) ? showthem() : hidethem();
   },
   {
     passive: true,

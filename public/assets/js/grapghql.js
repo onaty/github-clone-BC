@@ -66,7 +66,6 @@ fetch("https://api.github.com/graphql", {
   })
   .then((data) => {
     let repodata = data.data.viewer;
-    console.log(repodata);
     setUserProfileSection(repodata);
     reposec(repodata);
   });
@@ -79,19 +78,19 @@ function setUserProfileSection(data) {
   let mobileusername = document.getElementById("mobileusername");
   let mnavuser = document.getElementById("mnavuser");
   let webuserimage = document.getElementById("webuserimage");
-  mnavuser.innerHTML += `
+  mnavuser.innerHTML = `
   <a class="avatar" href="/"> <img class="avatar"
                                 src="${data.avatarUrl}" width="20"
-                                height="20" alt="@onaty">
+                                height="20" alt="@onaty"/>
                             <span>${data.login}</span></a>`;
 
   webuserimage.innerHTML = `
-                            <img class="userimage" src="${data.avatarUrl}" alt="">    
+                            <img class="userimage" src="${data.avatarUrl}" alt=""/>    
                             <span class="downarrow"></span>
                             `;
   imgmobile.innerHTML = `
         <img id="fullimage" class="avatar"
-            src="${data.avatarUrl}" alt="@${data.login}">
+            src="${data.avatarUrl}" alt="@${data.login}"/>
             <span class="downarrow"></span>
   `;
   mobileusername.innerHTML = `
@@ -100,31 +99,30 @@ function setUserProfileSection(data) {
 `;
   userprof.innerHTML = `
         <div class="userdetails">
-        <div class="userdp">
-        <img id="fullimage" class="avatar"
-            src="${data.avatarUrl}" alt="@${data.login}">
-        <p id="profilediv" style="margin: 0px;"></p>
-        </div>
-        <div id="usernamediv" class="username">
-        <h2 class="name">${data.name} </h2>
-        <p class="usernick">${data.login}</p>
-        </div>
+          <div class="userdp">
+            <img id="fullimage" class="avatar"
+                src="${data.avatarUrl}" alt="@${data.login}"/>
+            <p id="profilediv" style="margin: 0px;"></p>
+          </div>
+          <div id="usernamediv" class="username">
+            <h2 class="name">${data.name} </h2>
+            <p class="usernick">${data.login}</p>
+          </div>
         </div>
         ${data.bio ? `<p  class="status">${data.bio}</p>` : ""} 
   `;
 
   tabdivuserprof.innerHTML = `
             <div class="avatar"> <img
-            src="${data.avatarUrl}"></div>
+            src="${data.avatarUrl}"/></div>
             <div class="name">
             <p>${data.name}</p>
             </div>
     `;
   numberofrepo.innerHTML = `102`;
-  if (document.getElementById("fullimage")) {
     document.getElementById("shorten").style.opacity = "0";
     document.getElementById("fullimage").style.opacity = "1";
-  }
+  
 }
 
 function reposec(data) {
@@ -138,7 +136,7 @@ function reposec(data) {
     let languages = "";
     for (let index = 0; index < element.languages.nodes.length; index++) {
       let lang = element.languages.nodes[index];
-      console.log(lang);
+     
       languages += `
         <span class="reponame"> <span style="background-color:${lang.color}" class="colorss"></span> ${lang.name}</span>
         `;
@@ -247,7 +245,7 @@ function timecalc(t1) {
     datesd.getFullYear() < todaysdate.getFullYear() ? datesd.getFullYear() : ""
   }`;
   if (t.weekdays) {
-    return `updated ${yeardata}`;
+    return `Updated ${yeardata}`;
   } else if (t.days && t.days > 7) {
     return `${t.days} days`;
   } else if (t.hours) {

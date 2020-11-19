@@ -186,7 +186,7 @@ function reposec(data) {
              : ""
          }
       
-          <span class="detss lastupdate">Updated on ${timecalc(
+          <span class="detss lastupdate">${timecalc(
             element.updatedAt
           )}</span>
       </div>

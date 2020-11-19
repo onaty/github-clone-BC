@@ -1,4 +1,6 @@
-let token = "d315efee5025269bf863a3bdd6a794b64079c75d";
+let token = "3e82c8d0f8f778873d98ad339b7f35af725bbd3600";
+
+
 let months = [
   "Jan",
   "Feb",
@@ -13,6 +15,8 @@ let months = [
   "Nov",
   "Dec",
 ];
+
+
 let queryRequest = `
 {
   viewer {
@@ -51,7 +55,7 @@ fetch("https://api.github.com/graphql", {
   referrerPolicy: "no-referrer",
   headers: {
     "Content-Type": "application/json",
-    authorization: `token ${token} `,
+    authorization: `token ${token.substring(0,40)} `,
   },
   body: JSON.stringify({
     query: queryRequest,

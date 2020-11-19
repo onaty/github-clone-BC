@@ -247,7 +247,7 @@ function timecalc(t1) {
     datesd.getFullYear() < todaysdate.getFullYear() ? datesd.getFullYear() : ""
   }`;
   if (t.weekdays) {
-    return `${yeardata}`;
+    return `updated ${yeardata}`;
   } else if (t.days && t.days > 7) {
     return `${t.days} days`;
   } else if (t.hours) {
